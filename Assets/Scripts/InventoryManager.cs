@@ -22,6 +22,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject binUI;
     public GameObject invBackground;
     public GameObject interactText;
+    public GameObject scoreText;
 
     FirstPersonAIO player;
 
@@ -36,23 +37,18 @@ public class InventoryManager : MonoBehaviour
             return;
         }
         instance = this;
-        inventoryParent.SetActive(true);
+        //inventoryParent.SetActive(true);
     }
     #endregion
 
     void Start()
     {
-        inventoryParent.SetActive(false);
+        ScoreTracker.instance.scoreText = scoreText.GetComponent<Text>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonAIO>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //AddNewItem(itemToAdd);
-        }
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ShowPlayerInventory();

@@ -19,13 +19,13 @@ public class ScoreTracker : MonoBehaviour
             return;
         }
         instance = this;
-        scoreText = GameObject.FindGameObjectWithTag("Score Text").GetComponent<Text>();
+        //scoreText = GameObject.FindGameObjectWithTag("Score Text").GetComponent<Text>();
     }
     #endregion
 
     private void Start()
     {
-        
+        scoreText = InventoryManager.instance.scoreText.GetComponent<Text>();
         Object.DontDestroyOnLoad(this.gameObject);
     }
 
