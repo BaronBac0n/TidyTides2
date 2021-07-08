@@ -396,6 +396,7 @@ MonoBehaviour:
   binUI: {fileID: 885831516}
   invBackground: {fileID: 1429819522}
   interactText: {fileID: 1448333890}
+  scoreText: {fileID: 391030118}
 --- !u!1 &218776952
 GameObject:
   m_ObjectHideFlags: 0
