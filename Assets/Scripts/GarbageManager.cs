@@ -25,6 +25,11 @@ public class GarbageManager : MonoBehaviour
         Spawn();
     }
 
+    public void RandomPosition()
+    {
+        Vector3 pos = centre + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2)); // Randomize position within the cube
+    }
+
     public void Spawn()
     {
         for (int i = 0; i <= garbageAmount; i++) // Keeps spawning until the specified amount of garbage is reached
