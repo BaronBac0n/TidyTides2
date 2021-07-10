@@ -8,6 +8,20 @@ public class Timer : MonoBehaviour
     public float timeValue = 90;
     public Text timerText;
 
+    #region Singleton
+    public static Timer instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Timer found");
+            return;
+        }
+        instance = this;
+    }
+    #endregion
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +32,11 @@ public class Timer : MonoBehaviour
        else
         {
             timeValue = 0;
+        }
+
+       if(timeValue <= 0)
+        {
+            SceneSwapper.instance.ChangeScene("Score Scene");
         }
 
         DisplayTime(timeValue);

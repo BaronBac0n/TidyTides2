@@ -23,7 +23,12 @@ public class SceneSwapper : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            SceneManager.LoadScene("Score Scene", LoadSceneMode.Single);
+            ChangeScene("Score Scene");
         }
+    }
+
+    public void ChangeScene(string name)
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Single);
     }
 }

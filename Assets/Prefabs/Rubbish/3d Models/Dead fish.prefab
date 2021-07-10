@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1980293010006802992
+--- !u!1 &6365175242654215494
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5289409892373256998}
-  - component: {fileID: 770963289911538915}
-  - component: {fileID: 8181258824351506417}
-  - component: {fileID: 7726436352942300485}
-  - component: {fileID: -2128881553119474804}
+  - component: {fileID: 6365175242654215514}
+  - component: {fileID: 6365175242654215515}
+  - component: {fileID: 6365175242654215492}
+  - component: {fileID: 6365175242654215493}
+  - component: {fileID: 6520073743201485029}
+  - component: {fileID: 2733191308031022041}
   m_Layer: 0
-  m_Name: Bottle
-  m_TagString: Untagged
+  m_Name: Dead fish
+  m_TagString: Rubbish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5289409892373256998
+--- !u!4 &6365175242654215514
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980293010006802992}
+  m_GameObject: {fileID: 6365175242654215494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1596498, y: -1.183639, z: 2.3688807}
+  m_LocalPosition: {x: -181.52002, y: 24.65, z: 508.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &770963289911538915
+--- !u!33 &6365175242654215515
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980293010006802992}
+  m_GameObject: {fileID: 6365175242654215494}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8181258824351506417
+--- !u!23 &6365175242654215492
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980293010006802992}
+  m_GameObject: {fileID: 6365175242654215494}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,8 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 459bb6524905d03469cb30b84fec8653, type: 2}
+  - {fileID: 2100000, guid: 0c1432cd85678a349bea5f04c95299b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,26 +84,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7726436352942300485
+--- !u!65 &6365175242654215493
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980293010006802992}
+  m_GameObject: {fileID: 6365175242654215494}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-2128881553119474804
+--- !u!114 &6520073743201485029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365175242654215494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16da624aed026f5408069e611fcf3d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
+  type: 2
+  uiElement: {fileID: 315391305899773290, guid: 58f5c72ec95ae744f9c6f3dc813e2adf,
+    type: 3}
+--- !u!54 &2733191308031022041
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980293010006802992}
+  m_GameObject: {fileID: 6365175242654215494}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
