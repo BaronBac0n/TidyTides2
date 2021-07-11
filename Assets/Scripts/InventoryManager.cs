@@ -56,7 +56,7 @@ public class InventoryManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ShowBinUI();
+            //ShowBinUI();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
