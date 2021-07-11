@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreTracker : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class ScoreTracker : MonoBehaviour
 
     private void Start()
     {
+        if(SceneManager.GetActiveScene().name == "Main Scene")
         scoreText = InventoryManager.instance.scoreText.GetComponent<Text>();
         Object.DontDestroyOnLoad(this.gameObject);
     }
