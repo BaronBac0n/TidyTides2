@@ -4305,6 +4305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
+      propertyPath: mouseSensitivity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
       propertyPath: cameraInputMethod
       value: 0
       objectReference: {fileID: 0}
@@ -5446,7 +5451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108db9b97f5b19a4798a2c82ca912b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 180
+  timeValue: 2
   timerText: {fileID: 1901846510}
 --- !u!114 &1901846510
 MonoBehaviour:
