@@ -22,7 +22,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     interactText.text = "E to pickup";
                     interactText.gameObject.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) && InventoryManager.instance.CheckForEmptySlot() >=0)
                     {
                         lookingAt.GetComponent<Item>().Destroyed();
                         Destroy(lookingAt);
