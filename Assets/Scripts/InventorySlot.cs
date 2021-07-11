@@ -18,7 +18,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     {
         if (contents != null)
         {
-            
             contents.transform.position = transform.position;
 
             string contentsType = contents.GetComponent<Item>().type.ToString();

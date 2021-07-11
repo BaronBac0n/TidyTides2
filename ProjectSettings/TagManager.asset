@@ -12,6 +12,7 @@ TagManager:
   - Canvas
   - Bin
   - Score Text
+  - Stunned Text
   layers:
   - Default
   - TransparentFX
