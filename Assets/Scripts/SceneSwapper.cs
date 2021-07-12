@@ -21,14 +21,19 @@ public class SceneSwapper : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y))
-        {
-            ChangeScene("Score Scene");
-        }
+        //if(Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    ChangeScene("Score Scene");
+        //}
     }
 
     public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

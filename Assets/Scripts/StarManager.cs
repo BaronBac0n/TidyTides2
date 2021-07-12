@@ -7,9 +7,10 @@ public class StarManager : MonoBehaviour
     public int score;
     public int toGet1, toGet2, toGet3;
     public GameObject[] stars;
-
+    
     private void Start()
     {
+        Cursor.visible = true;
         score = ScoreTracker.instance.score;
 
        if(score <= toGet1)
@@ -31,5 +32,10 @@ public class StarManager : MonoBehaviour
         {
             stars[2].SetActive(true);
         }
+    }
+    private void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

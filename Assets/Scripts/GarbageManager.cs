@@ -36,7 +36,7 @@ public class GarbageManager : MonoBehaviour
         {
             Vector3 pos = centre + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2)); // Randomize position within the cube
             int garbageNumber = Random.Range(0, (prefabPool.Length)); // Random piece of garbage from the array
-            Instantiate(prefabPool[garbageNumber], pos, Quaternion.identity);
+            Instantiate(prefabPool[garbageNumber], pos, Quaternion.Euler(new Vector3(Random.Range(0,360), Random.Range(0, 360), Random.Range(0, 360))));
         }
     }
 
