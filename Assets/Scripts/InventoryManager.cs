@@ -37,6 +37,7 @@ public class InventoryManager : MonoBehaviour
             return;
         }
         instance = this;
+        ScoreTracker.instance.scoreText = scoreText.GetComponent<Text>();
         //inventoryParent.SetActive(true);
     }
     #endregion
