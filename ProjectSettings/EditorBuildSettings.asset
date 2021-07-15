@@ -4,18 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< Updated upstream
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Tidy Tides Menu.unity
-    guid: 4232115a1263b6c40a7e8f739f2a74a2
-  - enabled: 1
-    path: Assets/Scenes/Main Scene.unity
-    guid: 4e3e3ae2ccbb59e4599adebf47710c80
-  - enabled: 1
-    path: Assets/Scenes/Score Scene.unity
-    guid: d0c7779f6846e4649972b8b8e8e8db8d
-=======
   m_Scenes: []
->>>>>>> Stashed changes
   m_configObjects: {}
