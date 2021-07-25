@@ -10663,7 +10663,7 @@ PrefabInstance:
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.size
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
@@ -10674,52 +10674,52 @@ PrefabInstance:
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: e7ef5989e9e36e5408d3d999006632c8, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: 8887c6cd15d32cb489d1b1d6b763dad9, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: 5b996758c469c9f41b4378a2a247336c, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: fd546ec4b62a47c4e96f12aa4c226dab, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: 28d6433aee338344f995f8de824e83b0, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: f60839387b64454459778a5a5e5ceb2e, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: df4d21050d935794ebfb8ad2e1ba343d, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[7]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: df4d21050d935794ebfb8ad2e1ba343d, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[8]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: 6ca80d2b2bbdfad42b122fbe10b7d15d, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customClipSet.Array.data[9]
       value: 
-      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+      objectReference: {fileID: 8300000, guid: 7561dd42ac3fccf4f9b49112dfa69b88, type: 3}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: dynamicFootstep.customPhysMat.Array.data[0]
