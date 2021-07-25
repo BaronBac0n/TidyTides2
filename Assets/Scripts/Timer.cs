@@ -25,21 +25,24 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (timeValue > 0)
+        if (!BrochureScript.instance.brochureUp)
         {
-            timeValue -= Time.deltaTime;
-        }
-       else
-        {
-            timeValue = 0;
-        }
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else
+            {
+                timeValue = 0;
+            }
 
-       if(timeValue <= 0)
-        {
-            SceneSwapper.instance.ChangeScene("Score Scene");
-        }
+            if (timeValue <= 0)
+            {
+                SceneSwapper.instance.ChangeScene("Score Scene");
+            }
 
-        DisplayTime(timeValue);
+            DisplayTime(timeValue);
+        }
     }
 
     void DisplayTime(float timeToDisplay)

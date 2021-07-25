@@ -38,7 +38,7 @@ public class InventoryManager : MonoBehaviour
         }
         instance = this;
         ScoreTracker.instance.scoreText = scoreText.GetComponent<Text>();
-        //inventoryParent.SetActive(true);
+        
     }
     #endregion
 
@@ -50,7 +50,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && BrochureScript.instance.brochureUp == false)
         {
             ShowPlayerInventory();
         }
@@ -112,6 +112,7 @@ public class InventoryManager : MonoBehaviour
         inventoryParent.SetActive(false);
         binUI.SetActive(false);
         interactText.SetActive(false);
+        BrochureScript.instance.brochureUp = false;
     }
 
     public void AddNewItem(GameObject newItem)

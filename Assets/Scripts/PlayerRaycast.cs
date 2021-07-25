@@ -14,37 +14,40 @@ public class PlayerRaycast : MonoBehaviour
     {
         if (InventoryManager.instance.invBackground.activeInHierarchy == false) // if the player's inventory is not open
         {
-            if (WhatDidISee() != null) // if the player is looking at something
+            if (BrochureScript.instance.brochureUp == false) //if the brochure is not up
             {
-                 lookingAt = WhatDidISee();
+                if (WhatDidISee() != null) // if the player is looking at something
+                {
+                    lookingAt = WhatDidISee();
 
-                if (lookingAt.tag == "Rubbish")
-                {
-                    interactText.text = "E to pickup";
-                    interactText.gameObject.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E) && InventoryManager.instance.CheckForEmptySlot() >=0)
+                    if (lookingAt.tag == "Rubbish")
                     {
-                        lookingAt.GetComponent<Item>().Destroyed();
-                        Destroy(lookingAt);
+                        interactText.text = "E to pickup";
+                        interactText.gameObject.SetActive(true);
+                        if (Input.GetKeyDown(KeyCode.E) && InventoryManager.instance.CheckForEmptySlot() >= 0)
+                        {
+                            lookingAt.GetComponent<Item>().Destroyed();
+                            Destroy(lookingAt);
+                        }
                     }
-                }
-                else if (lookingAt.tag == "Bin")
-                {
-                    interactText.text = "E to use bin";
-                    interactText.gameObject.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E))
+                    else if (lookingAt.tag == "Bin")
                     {
-                        InventoryManager.instance.ShowBinUI();
+                        interactText.text = "E to use bin";
+                        interactText.gameObject.SetActive(true);
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            InventoryManager.instance.ShowBinUI();
+                        }
+                    }
+                    else
+                    {
+                        interactText.gameObject.SetActive(false);
                     }
                 }
                 else
                 {
                     interactText.gameObject.SetActive(false);
                 }
-            }
-            else
-            {
-                interactText.gameObject.SetActive(false);
             }
         }
     }
