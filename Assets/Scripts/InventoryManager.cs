@@ -37,7 +37,8 @@ public class InventoryManager : MonoBehaviour
             return;
         }
         instance = this;
-        //inventoryParent.SetActive(true);
+        ScoreTracker.instance.scoreText = scoreText.GetComponent<Text>();
+        
     }
     #endregion
 
@@ -49,14 +50,14 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && BrochureScript.instance.brochureUp == false)
         {
             ShowPlayerInventory();
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ShowBinUI();
+            //ShowBinUI();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -111,6 +112,7 @@ public class InventoryManager : MonoBehaviour
         inventoryParent.SetActive(false);
         binUI.SetActive(false);
         interactText.SetActive(false);
+        BrochureScript.instance.brochureUp = false;
     }
 
     public void AddNewItem(GameObject newItem)

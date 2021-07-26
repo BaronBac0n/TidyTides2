@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tidy Tides Menu.unity
-    guid: 4232115a1263b6c40a7e8f739f2a74a2
+    path: Assets/Scenes/New Menu/Tidy Tides New Menu.unity
+    guid: 8f764f6218e9cb246b341d59862d788f
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 4e3e3ae2ccbb59e4599adebf47710c80

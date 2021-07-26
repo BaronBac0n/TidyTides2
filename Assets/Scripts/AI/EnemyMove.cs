@@ -11,6 +11,11 @@ public class EnemyMove : MonoBehaviour
     [Tooltip("You can leave this, it is handled by the script it is only public for testing purposes")]
     public NavMeshAgent navMeshAgent;
 
+    [Tooltip("Put the player gameobject in here")]
+    public GameObject Player;
+    [Tooltip("How far will the ai try to stay away from the player")]
+    public float EnemyDistanceRun = 4f;
+
     [Tooltip("Place the garbageManager empty game object here or it won't work")]
     public GameObject garbageManager;
 
@@ -22,6 +27,10 @@ public class EnemyMove : MonoBehaviour
     [Tooltip("This is the largest amount of time the randomised timer can be set to, larger number here means longer delay between movement and litter actions")]
     public float maxTimer;
     private float timer;
+
+    private int state;
+
+    enum EnemyState { Litter = 1, Flee}
 
     private void Start()
     {
@@ -36,9 +45,10 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+
     private void SetDestination() //Move our agent to the destination
     {
-        if(destination != null)
+        if (destination != null)
         {
             Vector3 targetVector = destination.transform.position;
             navMeshAgent.SetDestination(targetVector);
@@ -67,11 +77,34 @@ public class EnemyMove : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0)
+        float distance = Vector3.Distance(transform.position, Player.transform.position);
+        //Debug.Log("Distance: " + distance);
+
+        if(distance < EnemyDistanceRun)
         {
-            MoveDestination();
-            RandomiseTimer();
-            Litter();
+            state = 2;
+        }
+        else
+        {
+            state = 1;
+        }
+        
+        switch (state)
+        {
+            case (int)EnemyState.Litter:
+                if (timer <= 0)
+                {
+                    MoveDestination();
+                    RandomiseTimer();
+                    Litter();
+                }
+                break;
+            case (int)EnemyState.Flee:
+                Debug.Log("Running!");
+                Vector3 dirToPlayer = transform.position - Player.transform.position;
+                Vector3 newPos = transform.position + dirToPlayer;
+                navMeshAgent.SetDestination(newPos);
+                break;
         }
     }
 

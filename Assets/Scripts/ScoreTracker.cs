@@ -27,17 +27,22 @@ public class ScoreTracker : MonoBehaviour
     private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Main Scene")
-        scoreText = InventoryManager.instance.scoreText.GetComponent<Text>();
+        //scoreText = InventoryManager.instance.scoreText.GetComponent<Text>();
         Object.DontDestroyOnLoad(this.gameObject);
+        
     }
 
     private void Update()
     {
+        if(scoreText != null)
         scoreText.text = "SCORE: " + score;
     }
 
     private void OnLevelWasLoaded(int level)
     {
+        if(level == 1)
+        score = 0;
+        if (level == 2)
         scoreText = GameObject.FindGameObjectWithTag("Score Text").GetComponent<Text>();
     }
 }

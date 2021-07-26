@@ -21,10 +21,10 @@ public class SceneSwapper : MonoBehaviour
 
     private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Y))
-        //{
-        //    ChangeScene("Score Scene");
-        //}
+        if(GameObject.FindGameObjectsWithTag("Game Manager").Length > 1)
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("Game Manager")[1]);
+        }
     }
 
     public void ChangeScene(string name)

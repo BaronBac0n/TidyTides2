@@ -13,6 +13,7 @@ TagManager:
   - Bin
   - Score Text
   - Stunned Text
+  - Game Manager
   layers:
   - Default
   - TransparentFX
