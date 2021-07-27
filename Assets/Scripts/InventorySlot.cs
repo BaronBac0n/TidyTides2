@@ -28,12 +28,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 {
                     StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.tickImage.gameObject));
                     ScoreTracker.instance.score += contents.GetComponent<Item>().value;
-                    print("Yay you put it in the right bin!");
+                    //Play 'Ding' sound here
+                    //print("Yay you put it in the right bin!");
                 }
                 else //the contents was not in the correct bin
                 {
                     StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.crossImage.gameObject));
-                    print("Wrong bin! That was supposed to go in the " + contentsType + " bin!");                    
+                    //Play 'err' sound here
+                    //print("Wrong bin! That was supposed to go in the " + contentsType + " bin!");                    
                 }
                 Destroy(contents);
                 contents = null;
