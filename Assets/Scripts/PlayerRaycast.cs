@@ -24,10 +24,17 @@ public class PlayerRaycast : MonoBehaviour
                     {
                         interactText.text = "E to pickup";
                         interactText.gameObject.SetActive(true);
-                        if (Input.GetKeyDown(KeyCode.E) && InventoryManager.instance.CheckForEmptySlot() >= 0)
+                        if (Input.GetKeyDown(KeyCode.E))
                         {
-                            lookingAt.GetComponent<Item>().Destroyed();
-                            Destroy(lookingAt);
+                            if (InventoryManager.instance.CheckForEmptySlot() >= 0)
+                            {
+                                lookingAt.GetComponent<Item>().Destroyed();
+                                Destroy(lookingAt);
+                            }
+                            else
+                            {
+                                StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.invFullText, 3, .4f));
+                            }
                         }
                     }
                     else if (lookingAt.tag == "Bin")
