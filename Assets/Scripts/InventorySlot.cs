@@ -7,7 +7,8 @@ using UnityEngine.EventSystems;
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public GameObject contents;
-
+    public AudioSource Ding;
+    public AudioSource Err;
     void Start()
     {
         if (contents != null)
@@ -29,12 +30,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                     StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.tickImage.gameObject, 3, .1f));
                     ScoreTracker.instance.score += contents.GetComponent<Item>().value;
                     //Play 'Ding' sound here
+                    Ding.Play(0);
                     //print("Yay you put it in the right bin!");
                 }
                 else //the contents was not in the correct bin
                 {
                     StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.crossImage.gameObject, 3, .1f));
                     //Play 'err' sound here
+                    Err.Play(0);
                     //print("Wrong bin! That was supposed to go in the " + contentsType + " bin!");                    
                 }
                 Destroy(contents);
