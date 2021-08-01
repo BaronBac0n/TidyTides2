@@ -26,14 +26,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             {
                 if (contentsType == gameObject.tag) //if the contents type is the same as the tag
                 {
-                    StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.tickImage.gameObject));
+                    StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.tickImage.gameObject, 3, .1f));
                     ScoreTracker.instance.score += contents.GetComponent<Item>().value;
                     //Play 'Ding' sound here
                     //print("Yay you put it in the right bin!");
                 }
                 else //the contents was not in the correct bin
                 {
-                    StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.crossImage.gameObject));
+                    StartCoroutine(InventoryManager.instance.Flash(InventoryManager.instance.crossImage.gameObject, 3, .1f));
                     //Play 'err' sound here
                     //print("Wrong bin! That was supposed to go in the " + contentsType + " bin!");                    
                 }

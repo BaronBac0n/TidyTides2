@@ -24,6 +24,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject interactText;
     public GameObject scoreText;
 
+    public GameObject invFullText;
+
     FirstPersonAIO player;
 
     #region Singleton
@@ -125,7 +127,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            print("inventory is full");
+            StartCoroutine(Flash(invFullText, 3, .4f));
         }
     }
 
@@ -141,14 +143,14 @@ public class InventoryManager : MonoBehaviour
         return -1;
     }
 
-    public IEnumerator Flash(GameObject obj)
+    public IEnumerator Flash(GameObject obj, int flashTimes, float flashDuration)
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < flashTimes; i++)
         {
             obj.SetActive(false);
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(flashDuration);
             obj.SetActive(true);
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(flashDuration);
         }
         obj.SetActive(false);
     }
