@@ -30,10 +30,13 @@ public class EnemyMove : MonoBehaviour
 
     private int state;
 
+    private Animator anim;
+
     enum EnemyState { Litter = 1, Flee}
 
     private void Start()
     {
+        anim = this.GetComponent<Animator>();
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         if(navMeshAgent == null)
         {
@@ -52,6 +55,10 @@ public class EnemyMove : MonoBehaviour
         {
             Vector3 targetVector = destination.transform.position;
             navMeshAgent.SetDestination(targetVector);
+            if(this.transform.position == destination.transform.position)
+            {
+                print("A");
+            }
         }
     }
 
@@ -80,13 +87,24 @@ public class EnemyMove : MonoBehaviour
         float distance = Vector3.Distance(transform.position, Player.transform.position);
         //Debug.Log("Distance: " + distance);
 
-        if(distance < EnemyDistanceRun)
+        if (distance < EnemyDistanceRun)
         {
             state = 2;
         }
         else
         {
             state = 1;
+        }
+
+        if (navMeshAgent.velocity != Vector3.zero)
+        {
+
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+
+            anim.SetBool("isMoving", false);
         }
         
         switch (state)
