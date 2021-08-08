@@ -79,7 +79,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     interactText.gameObject.SetActive(false);
                 }
-                print(lookingAt);
+                //print(lookingAt);
             }
         }
     }
