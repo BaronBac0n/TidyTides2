@@ -67,7 +67,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (CheckWhatUIMouseIsOver().tag != "Slot")
         {
             transform.position = initialPosition;
-            print("Must place over a slot");
+            //print("Must place over a slot");
         }
         else
         {
