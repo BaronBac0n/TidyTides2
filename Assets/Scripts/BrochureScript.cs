@@ -22,9 +22,12 @@ public class BrochureScript : MonoBehaviour
 
     public bool brochureUp;
 
+    AudioSource audioSource;
+
     void Start()
     {
         ShowBrochure();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -48,6 +51,7 @@ public class BrochureScript : MonoBehaviour
             {
                 ShowBrochure();
             }
+            audioSource.Play();
         }
     }
 
