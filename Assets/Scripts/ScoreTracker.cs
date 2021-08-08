@@ -42,7 +42,7 @@ public class ScoreTracker : MonoBehaviour
     {
         if(level == 1)
         score = 0;
-        if (level == 2)
+        if (level == 3)
         scoreText = GameObject.FindGameObjectWithTag("Score Text").GetComponent<Text>();
     }
 }
