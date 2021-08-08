@@ -9,6 +9,14 @@ public class PlayerRaycast : MonoBehaviour
     public Text interactText;
     RaycastHit whatIHit;
     public GameObject lookingAt;
+    AudioSource audioSource;
+
+    public AudioClip[] audioClips;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -28,6 +36,9 @@ public class PlayerRaycast : MonoBehaviour
                         {
                             if (InventoryManager.instance.CheckForEmptySlot() >= 0)
                             {
+                                int rand = Random.Range(0, audioClips.Length);
+                                audioSource.clip = audioClips[rand];
+                                audioSource.Play();
                                 lookingAt.GetComponent<Item>().Destroyed();
                                 Destroy(lookingAt);
                             }
