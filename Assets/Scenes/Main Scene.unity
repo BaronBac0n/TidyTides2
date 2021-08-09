@@ -16783,7 +16783,6 @@ GameObject:
   - component: {fileID: 650006395}
   - component: {fileID: 650006394}
   - component: {fileID: 650006393}
-  - component: {fileID: 650006396}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Game Manager
@@ -16831,21 +16830,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &650006396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650006392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc4ac34a910d0a46bfff2b9067aaec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 270308351}
-  cutsceneCamera: {fileID: 838154641}
-  timer: 5
 --- !u!1001 &651698113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45055,6 +45039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1682815927}
+  - component: {fileID: 1682815928}
   m_Layer: 0
   m_Name: Cutscene manager
   m_TagString: Untagged
@@ -45077,6 +45062,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682815928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682815926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc4ac34a910d0a46bfff2b9067aaec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 270308351}
+  cutsceneCamera: {fileID: 838154641}
+  timer: 5
 --- !u!1001 &1687373974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50821,7 +50821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108db9b97f5b19a4798a2c82ca912b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 300
+  timeValue: 4
   timerText: {fileID: 1901846510}
 --- !u!114 &1901846510
 MonoBehaviour:
