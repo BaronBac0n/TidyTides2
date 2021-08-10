@@ -256,9 +256,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 132df8f0810c73545b64919512b295aa, type: 3}
     m_FontSize: 14
-    m_FontStyle: 3
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -311,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9105, y: -1.0321}
-  m_SizeDelta: {x: 465.3513, y: 216.4569}
+  m_AnchoredPosition: {x: -0.0714, y: 0}
+  m_SizeDelta: {x: 560.2867, y: 216.4569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374986708
 MonoBehaviour:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fc4fc3c14666c5544aaf9ecb1c098fd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 747dd12689da1034cb5e6ec48358d4a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 750172049}
   - component: {fileID: 750172048}
   m_Layer: 5
-  m_Name: Play Button
+  m_Name: Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1966333636}
         m_TargetAssemblyTypeName: SceneSwapper, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -1041,7 +1041,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main Scene
+          m_StringArgument: Tidy Tides New Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &750172052
@@ -1077,7 +1077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Menu
 --- !u!222 &750172053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1966333636}
         m_TargetAssemblyTypeName: SceneSwapper, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -1735,7 +1735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109.82436, y: -106}
+  m_AnchoredPosition: {x: -109.824356, y: -92.00002}
   m_SizeDelta: {x: 149.6054, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378879297
@@ -1856,7 +1856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112, y: -106}
+  m_AnchoredPosition: {x: 112, y: -91.99999}
   m_SizeDelta: {x: 149.6054, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482580113
