@@ -256,7 +256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 132df8f0810c73545b64919512b295aa, type: 3}
+    m_Font: {fileID: 12800000, guid: 7015e53878110d941815ea453bffdc86, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 9999
+  m_Text: 'SCORE: 1234'
 --- !u!222 &277288093
 CanvasRenderer:
   m_ObjectHideFlags: 0
