@@ -9,6 +9,17 @@ public class PlayerRaycast : MonoBehaviour
     public Text interactText;
     RaycastHit whatIHit;
     public GameObject lookingAt;
+    AudioSource audioSource;
+
+    public AudioSource stopAudio;
+
+    public AudioClip[] audioClips;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        stopAudio = transform.GetChild(0).GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -28,6 +39,9 @@ public class PlayerRaycast : MonoBehaviour
                         {
                             if (InventoryManager.instance.CheckForEmptySlot() >= 0)
                             {
+                                int rand = Random.Range(0, audioClips.Length);
+                                audioSource.clip = audioClips[rand];
+                                audioSource.Play();
                                 lookingAt.GetComponent<Item>().Destroyed();
                                 Destroy(lookingAt);
                             }
@@ -46,6 +60,16 @@ public class PlayerRaycast : MonoBehaviour
                             InventoryManager.instance.ShowBinUI();
                         }
                     }
+                    else if (lookingAt.tag == "Enemy")
+                    {
+                        interactText.text = "E to shout";
+                        interactText.gameObject.SetActive(true);
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            stopAudio.Play();
+                            lookingAt.GetComponent<EnemyMove>().canLitter = false;  
+                        }
+                    }
                     else
                     {
                         interactText.gameObject.SetActive(false);
@@ -55,6 +79,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     interactText.gameObject.SetActive(false);
                 }
+                //print(lookingAt);
             }
         }
     }

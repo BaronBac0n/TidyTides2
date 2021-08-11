@@ -5,7 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-
+    public bool canLitter = true;
+    public float shoutCooldown;
+    float counter = 0;
     [Tooltip("Put an empty gameobject here for the ai to chase")]
     public Transform destination;
     [Tooltip("You can leave this, it is handled by the script it is only public for testing purposes")]
@@ -55,10 +57,6 @@ public class EnemyMove : MonoBehaviour
         {
             Vector3 targetVector = destination.transform.position;
             navMeshAgent.SetDestination(targetVector);
-            if(this.transform.position == destination.transform.position)
-            {
-                print("A");
-            }
         }
     }
 
@@ -98,13 +96,26 @@ public class EnemyMove : MonoBehaviour
 
         if (navMeshAgent.velocity != Vector3.zero)
         {
-
             anim.SetBool("isMoving", true);
         }
         else
         {
-
             anim.SetBool("isMoving", false);
+        }
+
+        if (canLitter)
+        {
+            this.tag = "Enemy";
+        }
+        else
+        {
+            this.tag = "Passive";
+            counter += Time.deltaTime;
+            if(counter >= shoutCooldown)
+            {
+                canLitter = true;
+                counter = 0;
+            }
         }
         
         switch (state)
@@ -114,6 +125,7 @@ public class EnemyMove : MonoBehaviour
                 {
                     MoveDestination();
                     RandomiseTimer();
+                    if(canLitter)
                     Litter();
                 }
                 break;

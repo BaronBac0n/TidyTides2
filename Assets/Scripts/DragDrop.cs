@@ -59,7 +59,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        print("A");
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
         InventoryManager.instance.dragging = null;
@@ -67,7 +66,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (CheckWhatUIMouseIsOver().tag != "Slot")
         {
             transform.position = initialPosition;
-            print("Must place over a slot");
+            //print("Must place over a slot");
         }
         else
         {
