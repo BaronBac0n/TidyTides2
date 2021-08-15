@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 315391305899773284}
   - component: {fileID: 7871956162968664198}
   m_Layer: 5
-  m_Name: Dead fish
+  m_Name: Banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04b846093a08c174ea8deb312b32c072, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73eed7d35b324b84ea206af885209246, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
