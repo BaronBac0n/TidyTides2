@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 44734384109856677}
   - component: {fileID: -1220383047912617369}
   m_Layer: 0
-  m_Name: Bottle
+  m_Name: Bleach Bottle
   m_TagString: Rubbish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
