@@ -7,6 +7,7 @@ public class PlayerRaycast : MonoBehaviour
 {
     public float interactDistance;
     public Text interactText;
+    public GameObject interactPanel;
     RaycastHit whatIHit;
     public GameObject lookingAt;
     AudioSource audioSource;
@@ -34,7 +35,7 @@ public class PlayerRaycast : MonoBehaviour
                     if (lookingAt.tag == "Rubbish")
                     {
                         interactText.text = "E to pickup";
-                        interactText.gameObject.SetActive(true);
+                        interactPanel.gameObject.SetActive(true);
                         if (Input.GetKeyDown(KeyCode.E))
                         {
                             if (InventoryManager.instance.CheckForEmptySlot() >= 0)
@@ -54,7 +55,7 @@ public class PlayerRaycast : MonoBehaviour
                     else if (lookingAt.tag == "Bin")
                     {
                         interactText.text = "E to use bin";
-                        interactText.gameObject.SetActive(true);
+                        interactPanel.gameObject.SetActive(true);
                         if (Input.GetKeyDown(KeyCode.E))
                         {
                             InventoryManager.instance.ShowBinUI();
@@ -63,7 +64,7 @@ public class PlayerRaycast : MonoBehaviour
                     else if (lookingAt.tag == "Enemy")
                     {
                         interactText.text = "E to shout";
-                        interactText.gameObject.SetActive(true);
+                        interactPanel.gameObject.SetActive(true);
                         if (Input.GetKeyDown(KeyCode.E))
                         {
                             stopAudio.Play();
@@ -72,12 +73,12 @@ public class PlayerRaycast : MonoBehaviour
                     }
                     else
                     {
-                        interactText.gameObject.SetActive(false);
+                        interactPanel.gameObject.SetActive(false);
                     }
                 }
                 else
                 {
-                    interactText.gameObject.SetActive(false);
+                    interactPanel.gameObject.SetActive(false);
                 }
                 //print(lookingAt);
             }
