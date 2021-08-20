@@ -543,9 +543,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  toGet1: 0
-  toGet2: 200
-  toGet3: 300
+  toGet1: 300
+  toGet2: 400
+  toGet3: 500
   stars:
   - {fileID: 1225365261}
   - {fileID: 496683601}

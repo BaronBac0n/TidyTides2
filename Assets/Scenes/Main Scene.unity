@@ -787,7 +787,7 @@ PrefabInstance:
     - target: {fileID: 1866878753882829420, guid: eb453cb2f2f46cd438da8618ce193d57,
         type: 3}
       propertyPath: garbageAmount
-      value: 200
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1866878753882829420, guid: eb453cb2f2f46cd438da8618ce193d57,
         type: 3}
@@ -27390,7 +27390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 270308351}
   cutsceneCamera: {fileID: 838154641}
-  timer: 5
+  timer: 10
 --- !u!1001 &1689566550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34753,6 +34753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: centre.z
       value: 134.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121938416686737544, guid: 9c4cae40e52248a4da26e344cc00c55f,
+        type: 3}
+      propertyPath: maxTimer
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4121938416686737544, guid: 9c4cae40e52248a4da26e344cc00c55f,
         type: 3}
